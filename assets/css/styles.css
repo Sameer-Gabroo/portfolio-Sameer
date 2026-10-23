@@ -999,7 +999,7 @@ button { font-family: inherit; cursor: pointer; }
 /* ------------------------------------------------------------ 9. PROJECTS */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
   gap: 22px;
 }
 .project-card {
@@ -1348,6 +1348,10 @@ button { font-family: inherit; cursor: pointer; }
   .tl-item { padding-left: 42px; }
   .tl-marker { left: 0; top: 20px; width: 30px; height: 30px; font-size: 0.62rem; }
   .tl-top { flex-direction: column; }
+  .tl-head { width: 100%; }
+  .tl-head-text { flex: 1; }
+  .tl-card { overflow-wrap: anywhere; }
+  .tl-period { max-width: 100%; }
   .tl-period { text-align: left; }
 }
 
@@ -1361,6 +1365,12 @@ button { font-family: inherit; cursor: pointer; }
   .stat-value { font-size: 1.85rem; }
   .form-row { grid-template-columns: 1fr; }
   .hero-cta .btn { flex: 1 1 100%; justify-content: center; }
+  .tl-item { padding-left: 34px; }
+  .tl-marker { width: 26px; height: 26px; border-radius: 8px; }
+  .tl-card { padding: 20px 16px; }
+  .tl-head { flex-direction: column; gap: 14px; }
+  .tl-head-text { width: 100%; }
+  .tl-role { font-size: 1.08rem; }
   .exp-filters { width: 100%; border-radius: var(--radius); }
   .exp-filter { flex: 1 1 100%; justify-content: center; }
   .footer-inner { flex-direction: column; align-items: flex-start; text-align: left; }
