@@ -254,6 +254,7 @@
     const el = $("#projectsGrid");
     if (!el) return;
     el.innerHTML = PORTFOLIO.projects
+      .filter((p) => p.demo || p.code)
       .map(
         (p, i) => {
           const cover = p.image
@@ -264,7 +265,7 @@
                </div>`;
           const links = [];
           if (p.code) links.push(`<a class="link-btn" href="${esc(p.code)}" target="_blank" rel="noopener">${icon("github")}Code</a>`);
-          if (p.demo) links.push(`<a class="link-btn" href="${esc(p.demo)}" target="_blank" rel="noopener">${icon("external")}Live demo</a>`);
+          if (p.demo) links.push(`<a class="link-btn" href="${esc(p.demo)}" target="_blank" rel="noopener">${icon("external")}${esc(p.linkLabel || "Visit website")}</a>`);
           if (!links.length) links.push(`<span class="link-btn muted">${icon("spark")}Case study</span>`);
 
           return `
@@ -588,6 +589,7 @@
     renderAbout();
     renderSkills();
     renderExperience();
+    renderProjects();
     renderCerts();
     renderEducation();
     renderContact();

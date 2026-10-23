@@ -241,6 +241,17 @@ const PORTFOLIO = {
   /* Fill these in with your real work. "image" is optional — a gradient cover is used when empty. */
   projects: [
     {
+      title: "1smtg.com",
+      tagline: "Professional project contribution",
+      description:
+        "Contributed to the 1smtg.com project as part of my professional work. Visit the website to explore the project.",
+      tags: ["Web project", "Professional work"],
+      gradient: ["#1d4e9c", "#9a7011"],
+      image: "assets/img/projects/1smtg.png",
+      code: "",
+      demo: "https://1smtg.com/"
+    },
+    {
       title: "Enterprise Web Platform",
       tagline: "ASP.NET Core + React + SQL Server",
       description:
